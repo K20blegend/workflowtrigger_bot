@@ -119,4 +119,5 @@ async def run_mc(ctx: discord.Interaction):
     else:
         await ctx.response.send_message(f"❌ Failed to trigger workflow: {response.text}", ephemeral=True)
 
-bot.run(DISCORD_TOKEN)
+import os
+bot.run(os.getenv("DISCORD_BOT_TOKEN"))
