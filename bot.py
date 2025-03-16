@@ -5,24 +5,21 @@ from discord.ext import commands, tasks
 from collections import defaultdict
 from datetime import datetime, timedelta
 
-# Load tokens from environment variables (replace these with real values)
-DISCORD_TOKEN = "MTM0NT1234567890"        #yo bot token
-GITHUB_TOKEN = "github_pat_1234567890"    #yo personal access token
-OWNER = "dibope"
+OWNER = "K20blegend"
 REPO = "mcserverstarter"
 WORKFLOW_FILE = "selenium.yml"
 
 # Allowed server ID
-ALLOWED_SERVER_ID = 1234567890123456789  # Replace with your Discord server ID
-NOTIFY_CHANNEL_ID = 1234567890123456789  # Channel where notification is sent (for workflow trigger logs) or just comment it out if not needed
+ALLOWED_SERVER_ID = 1345389367220502558  # Replace with your Discord server ID
+NOTIFY_CHANNEL_ID = 1345397944932761641  # Channel where notification is sent (for workflow trigger logs) or just comment it out if not needed
 
 # Intents for the bot
 intents = discord.Intents.default()
 bot = commands.Bot(command_prefix="!", intents=intents)
 
 # Cooldown & daily limit system
-COOLDOWN_TIME = 600  # 600 seconds (10 minutes) cooldown per user
-MAX_USES_PER_DAY = 6  # Limit per user per day
+COOLDOWN_TIME = 300  # 600 seconds (10 minutes) cooldown per user
+MAX_USES_PER_DAY = 10  # Limit per user per day
 user_cooldowns = {}  # Tracks last use time
 user_usage = defaultdict(int)  # Tracks daily usage count
 last_reset = datetime.utcnow()  # Track when the usage was last reset
