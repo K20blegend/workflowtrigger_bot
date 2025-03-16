@@ -99,7 +99,7 @@ async def run_mc(ctx: discord.Interaction):
     # Call GitHub Actions API
     url = f"https://api.github.com/repos/{OWNER}/{REPO}/actions/workflows/{WORKFLOW_FILE}/dispatches"
     headers = {
-        "Authorization": f"Bearer {GITHUB_TOKEN}",
+        "Authorization": f"Bearer {GITHUS_TOKEN}",
         "Accept": "application/vnd.github.v3+json"
     }
     data = {"ref": "main"}
