@@ -121,9 +121,9 @@ async def run_mc(ctx: discord.Interaction):
 
 import os
 
-TOKEN = os.getenv(DISCORD_BOT_TOKEN)
+TOKEN = os.getenv("DISCORD_BOT_TOKEN")  # ✅ Correct, add quotes
 
 if not TOKEN:
-    raise ValueError("DISCORD_BOT_TOKEN is not set!")
+    raise ValueError("DISCORD_BOT_TOKEN is not set! Check your environment variables.")
 
 bot.run(TOKEN)
